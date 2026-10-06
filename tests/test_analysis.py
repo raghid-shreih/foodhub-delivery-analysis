@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 from foodhub_analysis.analysis import analyze_orders, load_orders
-from foodhub_analysis.charts import save_charts
+from foodhub_analysis.charts import save_charts, save_gallery
 
 FIXTURE = Path(__file__).parent / "fixtures" / "orders.csv"
 
@@ -37,6 +37,17 @@ class AnalysisTests(unittest.TestCase):
             paths = save_charts(load_orders(FIXTURE), directory)
             self.assertEqual(len(paths), 3)
             self.assertTrue(all(path.stat().st_size > 1000 for path in paths))
+
+    def test_gallery_renders_from_fixture_without_order_ids(self):
+        with tempfile.TemporaryDirectory() as directory:
+            paths = save_gallery(load_orders(FIXTURE), directory)
+            self.assertEqual({path.name for path in paths}, {
+                "cuisine-demand.svg", "delivery-time.svg", "total-time.svg", "rating-coverage.svg"
+            })
+            for path in paths:
+                svg = path.read_text()
+                self.assertIn("<svg", svg)
+                self.assertNotIn("order_id", svg)
 
 
 if __name__ == "__main__":
