@@ -533,7 +533,7 @@ L 631.142776 329.92
     <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; fill: #672744" transform="translate(502.364789 72.234275)">10.5% of all orders</text>
    </g>
    <g id="text_19">
-    <text style="font-weight: 700; font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #24303b" x="54.47" y="21.96" transform="rotate(-0 54.47 21.96)">About one in ten orders exceed 60 minutes</text>
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #24303b" x="54.47" y="21.96" transform="rotate(-0 54.47 21.96)">Preparation and delivery time by minute</text>
    </g>
   </g>
  </g>
