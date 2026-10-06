@@ -1,0 +1,7 @@
+order_id,customer_id,restaurant_name,cuisine_type,cost_of_the_order,day_of_the_week,rating,food_preparation_time,delivery_time
+1,101,Example A,American,25,Weekend,5,30,35
+2,102,Example B,Japanese,20,Weekend,Not given,20,20
+3,103,Example A,American,5,Weekday,4,20,30
+4,104,Example C,Italian,10,Weekday,3,40,21
+5,105,Example A,American,21,Weekend,Not given,10,15
+6,106,Example B,Japanese,4,Weekday,5,15,20
